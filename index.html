@@ -1,0 +1,1542 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BounceForce VR | Banter | Minty Crisp</title>
+<!-- A-Frame official release 1.4.1 -->
+<script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+<!-- BounceForce VR built on top of A-Frame UX Library Engine v0.1 -->
+<script src="./bounceforce.js"></script> 
+</head>
+<body>
+<main>
+<a-scene
+auxl
+renderer="antialias: true; colorManagement: true; sortObjects: true"
+sq-singleuser
+sq-clippingplane="near: 0.2; far: 2000;"
+sq-spawnpoint="position: 0 0 0;"
+sq-disableteleport
+sq-hidedefaulttextures
+>
+<!-- - - - - - - - - - - Assets - - - - - - - - - - -->
+<a-assets timeout="10000">
+<!-- - - - - - - - - - - Images - - - - - - - - - - -->
+<a-asset id="pattern10" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_10.png?v=1677020795955" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern14" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_14.png?v=1677020782332.png" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern16" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_16.png?v=1677020769563" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern23" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_23.png?v=1677020754712" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern24" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_24.png?v=1677020741264" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern33" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_33.png?v=1677020725188" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern34" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_34.png?v=1677116297443" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern46" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_46.png?v=1677021402936" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern49" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_49.png?v=1677020710817" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern55" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_55.png?v=1677020695414" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern59" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_59.png?v=1677020677831" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern61" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_61.png?v=1677020651835" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern62" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_62.png?v=1677020631821" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern63" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_63.png?v=1677020615430" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern64" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_64.png?v=1677020600229" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern65" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_65.png?v=1677020471497" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern66" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_66.png?v=1677020455780" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern69" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_69.png?v=1677020432398" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern72" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_72.png?v=1677020413874" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern74" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_74.png?v=1677020394863" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern75" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_75.png?v=1677020363128" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern76" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_76.png?v=1677020354519" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern78" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_78.png?v=1677020347512" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern80" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_80.png?v=1677020338831" preload="auto" crossorigin="anonymous"></a-asset>
+<a-asset id="pattern84" src="https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/pattern_84.png?v=1677052123167" preload="auto" crossorigin="anonymous"></a-asset>
+</a-assets>
+
+<!-- - - - - - - - - - - Ammo Controls - - - - - - - - - - -->
+
+<!-- Right Arm -->
+<a-box id='rightHandTrigger'
+material="shader: flat; color: white; opacity: 0"
+depth="0.05" 
+height="0.05"
+width="0.05"
+position="0 0 0"
+scale="1 1 1"
+sq-collider
+sq-triggercollider
+sq-righthand="whoToShow: everyone;"
+>
+<a-circle id='aimShooter'
+material="shader: flat; color: cyan; opacity: 0.1; side: double; src: #pattern14"
+radius="1" 
+scale="0.1 0.1 0.1"
+position="-0.0115 0.0265 -0.25"
+sq-interactable
+sq-collider
+spawn-ammo
+></a-circle>
+
+<a-cylinder id='toggle0'
+material="shader: flat; color: cyan; opacity: 0.05; src: #pattern33"
+height="1" 
+radius="1"
+position="0 0 0.1"
+rotation="90 0 0"
+scale="0.05 0.09 0.05"
+sq-collider
+sq-triggercollider
+arm-toggle0
+></a-cylinder>
+<a-cylinder id='toggle1'
+material="shader: flat; color: lime; opacity: 0.05; src: #pattern24; repeat: 2 2"
+height="1" 
+radius="1"
+position="0 0 0.25"
+rotation="90 0 0"
+scale="0.05 0.09 0.05"
+sq-collider
+sq-triggercollider
+arm-toggle1
+></a-cylinder>
+<a-cylinder id='toggle4'
+material="shader: flat; color: red; opacity: 0.05; src: #pattern76; repeat: 3 3"
+height="1" 
+radius="1"
+position="0 0 0.4"
+rotation="90 0 0"
+scale="0.05 0.09 0.05"
+sq-collider
+sq-triggercollider
+arm-toggle4
+></a-cylinder>
+</a-box>
+
+<!-- Left Arm -->
+<a-box id='leftHandTrigger'
+material="shader: flat; color: #FFFFFF; opacity: 0"
+depth="0.05" 
+height="0.05"
+width="0.05"
+position="0 0 0"
+scale="1 1 1"
+sq-collider
+sq-triggercollider
+sq-lefthand="whoToShow: everyone;"
+>
+<a-cylinder id='toggle2'
+material="shader: flat; color: yellow; opacity: 0.05; src: #pattern72; repeat: 2 2"
+height="1" 
+radius="1"
+position="0 0 0.1"
+rotation="90 0 0"
+scale="0.05 0.09 0.05"
+sq-collider
+sq-triggercollider
+arm-toggle2
+></a-cylinder>
+<a-cylinder id='toggle3'
+material="shader: flat; color: magenta; opacity: 0.05; src: #pattern80; repeat: 2 1"
+height="1" 
+radius="1"
+position="0 0 0.25"
+rotation="90 0 0"
+scale="0.05 0.09 0.05"
+sq-collider
+sq-triggercollider
+arm-toggle3
+></a-cylinder>
+<a-cylinder id='toggle5'
+material="shader: flat; color: grey; opacity: 0.2; src: #pattern33; repeat: 0.5 0.5"
+height="1" 
+radius="1"
+position="0 0 0.40"
+rotation="90 0 0"
+scale="0.05 0.09 0.05"
+sq-collider
+sq-triggercollider
+arm-toggle5
+></a-cylinder>
+</a-box>
+
+<!-- Body -->
+<a-box id='body'
+material="shader: flat; color: white; opacity: 0"
+depth="0.01" 
+height="0.01"
+width="0.01"
+scale="1 1 1"
+self-attach
+>
+<a-cylinder id='bodyTrigger'
+material="shader: flat; color: black; opacity: 0"
+height="1" 
+radius="1"
+scale="0.175 1.7 0.175"
+position="0 -0.7 0.05"
+sq-collider
+sq-triggercollider
+player-hitbox
+></a-cylinder>
+</a-box> 
+<!-- - - - - - - - - - - Info - - - - - - - - - - -->
+
+<!-- Title -->
+<a-entity id="titleText"
+text="color: white; value:Welcome to\nBounceForce; width: 3; align: center"
+position="0 6 -4"
+scale="4 4 4"
+></a-entity>
+
+<!-- Ammo -->
+<a-entity id="ammoExampleText"
+text="color: white; value:Aim with Right Hand and Trigger to Fire/Spawn Ammo\nUse your Right or Left Hand to Toggle Ammo Switches on Arms; width: 1; align: center"
+position="0 3.5 -4"
+scale="1 1 1"
+></a-entity>
+
+<!-- Ammo 0 -->
+<a-box id='ammo0Example'
+material="shader: flat; color: cyan; opacity: 1; src: #pattern33"
+position="-5 1.5 -4"
+scale="0.1 0.1 0.1"
+></a-box>
+<a-entity id="ammo0ExampleText"
+text="color: white; value:Ammo 0 Cyan\nBox w/ no gravity\nMid shoot force\nLow bounce\n5 Bounce Life\nSpawn Max is 15\nToggle on Right Wrist; width: 1; align: center"
+position="-5 2.25 -4"
+scale="0.6 0.6 0.6"
+></a-entity>
+
+<!-- Ammo 1 -->
+<a-sphere id='ammo1Example'
+material="shader: flat; color: lime; opacity: 1; src: #pattern24; repeat: 2 2"
+position="-3 1.5 -4"
+scale="0.1 0.1 0.1"
+></a-sphere>
+<a-entity id="ammo1ExampleText"
+text="color: white; value:Ammo 1 Lime\nSphere w/ gravity\nLow shoot force\nMid bounce\n5 Bounce Life\nSpawn Max is 10\nToggle on Right Elbow; width: 1; align: center"
+position="-3 2.25 -4"
+scale="0.6 0.6 0.6"
+></a-entity>
+
+<!-- Ammo 2 -->
+<a-sphere id='ammo2Example'
+material="shader: flat; color: yellow; opacity: 1; src: #pattern72; repeat: 2 2"
+position="-1 1.5 -4"
+scale="0.05 0.05 0.05"
+></a-sphere>
+<a-entity id="ammo2ExampleText"
+text="color: white; value:Ammo 2 Yellow\nTiny Sphere w/no gravity\nHigh shoot force\nMid bounce\n5 Bounce Life\nSpawn Max is 10\nToggle on Left Wrist; width: 1; align: center"
+position="-1 2.25 -4"
+scale="0.6 0.6 0.6"
+></a-entity>
+
+<!-- Ammo 3 -->
+<a-cylinder id='ammo3Example'
+height="2"
+material="shader: flat; color: magenta; opacity: 1; src: #pattern80; repeat: 2 1"
+position="1 1.5 -4"
+scale="0.25 0.25 0.25"
+></a-cylinder>
+<a-entity id="ammo3ExampleText"
+text="color: white; value:Ammo 3 Magenta\nCylinder w/ no gravity\nNo shoot force\nHigh bounce w/ 5 Bounce Life\nSpawn Max is 8\nToggle on Left Elbow; width: 1; align: center"
+position="1 2.25 -4"
+scale="0.6 0.6 0.6"
+></a-entity>
+
+<!-- Ammo 4 -->
+<a-torus id='ammo4Example'
+radius-tubular="0.1"
+material="shader: flat; color: red; opacity: 1; src: #pattern76; repeat: 3 3"
+position="3 1.5 -4"
+scale="0.15 0.15 0.15"
+></a-torus>
+<a-entity id="ammo4ExampleText"
+text="color: white; value:Ammo 4 Red\nTorus Kinematic Shield\nSpawn Max is 10\nToggle on Right Shoulder; width: 1; align: center"
+position="3 2.25 -4"
+scale="0.6 0.6 0.6"
+></a-entity>
+
+<!-- Ammo 5 -->
+<a-box id='ammo5Example'
+material="shader: flat; color: grey; opacity: 1; src: #pattern33; repeat: 0.5 0.5"
+position="5 1.5 -4"
+scale="1 0.025 1"
+></a-box>
+<a-entity id="ammo5ExampleText"
+text="color: white; value:Ammo 5 Grey\nBox Floor Kinematic Platform\nSpawn Max is 4\nToggle on Left Shoulder; width: 1; align: center"
+position="5 2.25 -4"
+scale="0.6 0.6 0.6"
+></a-entity>
+
+<!-- - - - - - - - - - - Targets - - - - - - - - - - -->
+
+<!-- Target -->
+<a-entity id="targetText"
+text="color: white; value:Destroy Target Objective; width: 1; align: center"
+position="5 1.75 -1"
+rotation="0 -90 0"
+scale="1 1 1"
+></a-entity>
+<a-box id='floatTargetExample'
+material="shader: flat; color: teal; opacity: 0"
+depth="1" 
+height="1" 
+width="1"
+position="5 0.6 -1"
+scale='1 1 1'
+sq-boxcollider
+sq-rigidbody="
+useGravity: false;
+"
+><a-box id='floatTargetExampleTrigger'
+material="shader: flat; color: teal; opacity: 1;"
+depth="1" 
+height="1" 
+width="1"
+position="0 0 0"
+scale='1.01 1.01 1.01'
+sq-boxcollider
+sq-triggercollider
+block-hits="hits: 8; rigidBody: floatTargetExample; isChild: true; objective: false;"
+></a-box></a-box>
+
+<!-- - - - - - - - - - - Power Up Info - - - - - - - - - - -->
+<a-entity id="pickUpHealthText"
+text="color: white; value:+5 Health; width: 1; align: center"
+position="-6.5 1.75 -3"
+rotation="0 90 0"
+scale='1 1 1'
+></a-entity>
+<a-sphere id='pickUpHealth'
+material="shader: flat; color: red; opacity: 0.75; src: #pattern75; repeat: 3 3"
+position="-6.5 0.5 -3"
+scale="0.5 0.5 0.5"
+animation__spiny="property: object3D.rotation.y; from: 0; to: -360; dur: 25000; delay: 1000; loop: true; dir: normal; easing: linear; elasticity: 400; autoplay: true; enabled: true;"
+animation__posy="property: object3D.position.y; from: 0.75; to: 1; dur: 10000; delay: 0; loop: true; dir: alternate; easing: easeInOutSine; elasticity: 400; autoplay: true; enabled: true;"
+></a-sphere>
+
+<a-entity id="pickUpBonusText"
+text="color: white; value:+Bonus Points; width: 1; align: center"
+position="-6.5 1.75 -1.5"
+rotation="0 90 0"
+scale='1 1 1'
+></a-entity>
+<a-sphere id='pickUpBonus'
+material="shader: flat; color: blue; opacity: 0.75; src: #pattern84; repeat: 3 3"
+position="-6.5 0.5 -1.5"
+scale="0.5 0.5 0.5"
+animation__spiny="property: object3D.rotation.y; from: 0; to: -360; dur: 25000; delay: 2000; loop: true; dir: normal; easing: linear; elasticity: 400; autoplay: true; enabled: true;"
+animation__posy="property: object3D.position.y; from: 0.75; to: 1; dur: 10000; delay: 0; loop: true; dir: alternate; easing: easeInOutSine; elasticity: 400; autoplay: true; enabled: true;"
+></a-sphere>
+
+<a-entity id="pickUpPower"
+text="color: white; value:2x Damage; width: 1; align: center"
+position="-6.5 1.75 0"
+rotation="0 90 0"
+scale='1 1 1'
+></a-entity>
+<a-sphere id='pickUpPower'
+material="shader: flat; color: green; opacity: 0.75; src: #pattern76; repeat: 3 3"
+position="-6.5 0.5 0"
+scale="0.5 0.5 0.5"
+animation__spiny="property: object3D.rotation.y; from: 0; to: -360; dur: 25000; delay: 3000; loop: true; dir: normal; easing: linear; elasticity: 400; autoplay: true; enabled: true;"
+animation__posy="property: object3D.position.y; from: 0.75; to: 1; dur: 10000; delay: 0; loop: true; dir: alternate; easing: easeInOutSine; elasticity: 400; autoplay: true; enabled: true;"
+></a-sphere>
+
+<!-- - - - - - - - - - - Mirrors - - - - - - - - - - -->
+<a-entity id='mirror1'
+sq-mirror 
+position="0 5 30"
+rotation="0 0 0" 
+scale="11.75 13.25 1"
+></a-entity>
+
+<!-- - - - - - - - - - - Level - - - - - - - - - - -->
+
+<!-- Wall X -->
+<a-box id='wallX1'
+material="shader: flat; color: grey; opacity: 1; side: double; src: #pattern74"
+position="-25 15 12.5"
+scale="0.1 30 35"
+sq-boxcollider
+sq-triggercollider
+block-bounce-x-all
+><a-box id='wallX1Rigid'
+material="shader: flat; color: grey; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='wallX2'
+material="shader: flat; color: grey; opacity: 1; side: double; src: #pattern74"
+position="25 15 12.5"
+scale="0.1 30 35"
+sq-boxcollider
+sq-triggercollider
+block-bounce-x-all
+><a-box id='wallX2Rigid'
+material="shader: flat; color: grey; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='wallX5'
+material="shader: flat; color: grey; opacity: 1; side: double; src: #pattern74"
+position="25 15 55"
+scale="0.1 30 50"
+sq-boxcollider
+sq-triggercollider
+block-bounce-x-all
+><a-box id='wallX5Rigid'
+material="shader: flat; color: grey; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='wallX6'
+material="shader: flat; color: grey; opacity: 1; side: double; src: #pattern74"
+position="-25 15 55"
+scale="0.1 30 50"
+sq-boxcollider
+sq-triggercollider
+block-bounce-x-all
+><a-box id='wallX6Rigid'
+material="shader: flat; color: grey; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='wallX11'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74"
+position="-5 5 20"
+scale="0.1 10 20"
+sq-boxcollider
+sq-triggercollider
+block-bounce-x-all
+><a-box id='wallX11Rigid'
+material="shader: flat; color: pink; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+
+<a-box id='wallX12'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74"
+position="5 5 20"
+scale="0.1 10 20"
+sq-boxcollider
+sq-triggercollider
+block-bounce-x-all
+><a-box id='wallX12Rigid'
+material="shader: flat; color: pink; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<!-- Ceiling Y -->
+<a-box id='ceilingY2'
+material="shader: flat; color: grey; opacity: 1; side: double; src: #pattern74"
+position="0 30 37.5"
+scale="50 0.1 85"
+sq-boxcollider
+sq-triggercollider
+block-bounce-y-all
+><a-box id='ceilingY2Rigid'
+material="shader: flat; color: pink; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='ceilingY6'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74"
+position="0 10 20"
+scale="10 0.1 20"
+sq-boxcollider
+sq-triggercollider
+block-bounce-y-all
+><a-box id='ceilingY6Rigid'
+material="shader: flat; color: white; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<!-- Wall Z -->
+<a-box id='wallZ1'
+material="shader: flat; color: grey; opacity: 1; side: double; src: #pattern74"
+position="0 15 -5"
+scale="50 30 0.1"
+sq-boxcollider
+sq-triggercollider
+block-bounce-z-all
+><a-box id='wallZ1Rigid'
+material="shader: flat; color: blue; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='wallZ3'
+material="shader: flat; color: grey; opacity: 1; side: double; src: #pattern74"
+position="-15 15 30"
+scale="20 30 0.1"
+sq-boxcollider
+sq-triggercollider
+block-bounce-z-all
+><a-box id='wallZ3Rigid'
+material="shader: flat; color: blue; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='wallZ4'
+material="shader: flat; color: grey; opacity: 1; side: double; src: #pattern74"
+position="15 15 30"
+scale="20 30 0.1"
+sq-boxcollider
+sq-triggercollider
+block-bounce-z-all
+><a-box id='wallZ4Rigid'
+material="shader: flat; color: blue; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='wallZ5'
+material="shader: flat; color: grey; opacity: 1; side: double; src: #pattern74"
+position="0 20 30"
+scale="10 20 0.1"
+sq-boxcollider
+sq-triggercollider
+block-bounce-z-all
+><a-box id='wallZ5Rigid'
+material="shader: flat; color: blue; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='wallZ6'
+material="shader: flat; color: grey; opacity: 1; side: double; src: #pattern74"
+position="0 15 80"
+scale="50 30 0.1"
+sq-boxcollider
+sq-triggercollider
+block-bounce-z-all
+><a-box id='wallZ6Rigid'
+material="shader: flat; color: blue; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='wallZ12'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74"
+position="0 5 28.5"
+scale="10 10 0.1"
+sq-boxcollider
+sq-triggercollider
+block-bounce-z-all
+><a-box id='wallZ12Rigid'
+material="shader: flat; color: white; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<!-- - - - - - - - - - - Arena - - - - - - - - - - -->
+<a-box id='arenaCeilingY1'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74; repeat: 1 2"
+position="0 5 55"
+scale="5 0.1 25"
+sq-boxcollider
+sq-triggercollider
+block-bounce-y-all
+><a-box id='arenaCeilingY1Rigid'
+material="shader: flat; color: white; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='arenaCeilingY2'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74"
+position="0 20 60"
+scale="5 0.1 10"
+sq-boxcollider
+sq-triggercollider
+block-bounce-y-all
+><a-box id='arenaCeilingY2Rigid'
+material="shader: flat; color: white; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='arenaCeilingY3'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74; repeat: 1 3"
+position="-22.5 12.5 55"
+scale="5 0.1 50"
+sq-boxcollider
+sq-triggercollider
+block-bounce-y-all
+><a-box id='arenaCeilingY3Rigid'
+material="shader: flat; color: white; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='arenaCeilingY4'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74"
+position="20 20 55"
+scale="10 0.1 10"
+sq-boxcollider
+sq-triggercollider
+block-bounce-y-all
+><a-box id='arenaCeilingY4Rigid'
+material="shader: flat; color: white; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='arenaCeilingY5'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74"
+position="15 15 55"
+scale="4.5 0.1 5"
+sq-boxcollider
+sq-triggercollider
+block-bounce-y-all
+><a-box id='arenaCeilingY5Rigid'
+material="shader: flat; color: white; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='arenaCeilingY6'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74"
+position="0 12.5 50"
+scale="5 0.1 10"
+sq-boxcollider
+sq-triggercollider
+block-bounce-y-all
+><a-box id='arenaCeilingY6Rigid'
+material="shader: flat; color: white; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='arenaWallX1'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74; repeat: 2 1"
+position="-2.5 2.5 55"
+scale="0.1 5 25"
+sq-boxcollider
+sq-triggercollider
+block-bounce-x-all
+><a-box id='arenaWallX1Rigid'
+material="shader: flat; color: pink; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='arenaWallX2'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74; repeat: 2 1"
+position="2.5 2.5 55"
+scale="0.1 5 25"
+sq-boxcollider
+sq-triggercollider
+block-bounce-x-all
+><a-box id='arenaWallX2Rigid'
+material="shader: flat; color: pink; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='arenaWallX3'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74; repeat: 1 3"
+position="0 15 70"
+scale="0.1 30 5"
+sq-boxcollider
+sq-triggercollider
+block-bounce-x-all
+><a-box id='arenaWallX3Rigid'
+material="shader: flat; color: pink; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='arenaWallX4'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74"
+position="-20 2.5 55"
+scale="0.1 5 10"
+sq-boxcollider
+sq-triggercollider
+block-bounce-x-all
+><a-box id='arenaWallX4Rigid'
+material="shader: flat; color: pink; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='arenaWallX5'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74"
+position="12.5 2.5 55"
+scale="0.1 5 20"
+sq-boxcollider
+sq-triggercollider
+block-bounce-x-all
+><a-box id='arenaWallX5Rigid'
+material="shader: flat; color: pink; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='arenaWallZ1'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74; repeat: 1 2"
+position="0 17.5 55"
+scale="5 25 0.1"
+sq-boxcollider
+sq-triggercollider
+block-bounce-z-all
+><a-box id='arenaWallZ1Rigid'
+material="shader: flat; color: white; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='arenaWallZ2'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74"
+position="20 25 50"
+scale="10 10 0.1"
+sq-boxcollider
+sq-triggercollider
+block-bounce-z-all
+><a-box id='arenaWallZ2Rigid'
+material="shader: flat; color: white; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='arenaWallZ3'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74"
+position="20 25 60"
+scale="10 10 0.1"
+sq-boxcollider
+sq-triggercollider
+block-bounce-z-all
+><a-box id='arenaWallZ3Rigid'
+material="shader: flat; color: white; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='arenaWallZ4'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74"
+position="-20 2.5 55"
+scale="10 5 0.1"
+sq-boxcollider
+sq-triggercollider
+block-bounce-z-all
+><a-box id='arenaWallZ4Rigid'
+material="shader: flat; color: white; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='arenaWallZ5'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74"
+position="3.75 2.5 52.5"
+scale="2.5 5 0.1"
+sq-boxcollider
+sq-triggercollider
+block-bounce-z-all
+><a-box id='arenaWallZ5Rigid'
+material="shader: flat; color: white; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='arenaWallZ6'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74"
+position="3.75 2.5 57.5"
+scale="2.5 5 0.1"
+sq-boxcollider
+sq-triggercollider
+block-bounce-z-all
+><a-box id='arenaWallZ6Rigid'
+material="shader: flat; color: white; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='arenaWallZ7'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74"
+position="3.75 2.5 52.5"
+scale="2.5 5 0.1"
+sq-boxcollider
+sq-triggercollider
+block-bounce-z-all
+><a-box id='arenaWallZ7Rigid'
+material="shader: flat; color: white; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<a-box id='arenaWallZ8'
+material="shader: flat; color: white; opacity: 1; side: double; src: #pattern74"
+position="15 2.5 55"
+scale="5 5 0.1"
+sq-boxcollider
+sq-triggercollider
+block-bounce-z-all
+><a-box id='arenaWallZ8Rigid'
+material="shader: flat; color: white; opacity: 0"
+position="0 0 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+sq-climbable
+></a-box></a-box>
+
+<!-- - - - - - - - - - - Low Grav Beam - - - - - - - - - - -->
+<a-box id="playerGravElevator"
+material="shader: flat; color: white; opacity: 0.15; side: double; src: #pattern10; repeat: 1 6"
+position="11 15 55"
+scale="3 30 3"
+sq-collider
+sq-triggercollider
+sq-gravityfield="gravity: 0 1.2 0"
+animation__matoffset="property: material.offset; from: 0 0; to: 0 -10; dur: 60000; delay: 0; loop: true; dir: normal; easing: linear; elasticity: 400; autoplay: true; enabled: true;"
+></a-box>
+
+<!-- - - - - - - - - - - Speed Up - - - - - - - - - - -->
+<a-box id="speedUp1"
+material="shader: flat; color: white; opacity: 0.25; src: #pattern49"
+position="0 2.5 50"
+scale="5 5 0.25"
+sq-collider
+sq-triggercollider
+speedup
+animation__matrepeat="property: material.repeat; from: 0.5 0.5; to: 2 2; dur: 30000; delay: 0; loop: true; dir: alternate; easing: linear; elasticity: 400; autoplay: true; enabled: true;"
+></a-box>
+
+<!-- - - - - - - - - - - Particles - - - - - - - - - - -->
+<a-entity id='particleTest'
+sq-particlesystem="
+duration: 0;
+startColor: pink;
+startDelay: 0;
+startDelayMultiplier: 1;
+startLifetime: 0;
+startLifetimeMultiplier: 1;
+startSize: 0.42;
+startSpeed: 1;
+startRotation: 1;
+simulationSpace: local;
+emitterVelocity: {x: 0, y: 0, z: 0};
+particleTexture: https://cdn.glitch.global/a0e5158b-1e9b-4106-802f-3462da3fea26/logo.png?v=1676059673797;
+maxParticles: 6;
+flipRotation: false;
+loop: true;
+prewarm: false;
+"
+position="0 2.5 50"
+></a-entity>
+
+<!-- - - - - - - - - - - Omni Ammo Portal - - - - - - - - - - -->
+
+<!-- Omni 2Way Ammo Portal 1 -->
+<a-sphere id="omni-ammo-portal1"
+material="shader: flat; color: white; opacity: 0.5; src: #pattern23; repeat: 2 2"
+radius="1"
+scale='1.5 1.5 1.5'
+position="-22.5 14 55"
+sq-collider
+sq-triggercollider
+omni-ammo-portal="connect: omni-ammo-portal2;"
+animation__matoffset="property: material.offset; from: 0 0; to: 4 4; dur: 30000; delay: 0; loop: true; dir: normal; easing: linear; elasticity: 400; autoplay: true; enabled: true;"
+></a-sphere>
+<!-- Omni 2Way Ammo Portal 2 -->
+<a-sphere id="omni-ammo-portal2"
+material="shader: flat; color: white; opacity: 0.5; src: #pattern23; repeat: 2 2"
+radius="1"
+scale='1.5 1.5 1.5'
+position="0 8 50"
+sq-collider
+sq-triggercollider
+omni-ammo-portal="connect: omni-ammo-portal1;"
+animation__matoffset="property: material.offset; from: 0 0; to: 4 4; dur: 30000; delay: 0; loop: true; dir: normal; easing: linear; elasticity: 400; autoplay: true; enabled: true;"
+></a-sphere>
+
+<!-- - - - - - - - - - - Explosive Obstacle - - - - - - - - - - -->
+
+<a-sphere id="explode1"
+material="shader: flat; color: red; opacity: 1; src: #pattern69; repeat: 2 2"
+radius="1"
+scale='1 1 1'
+position="15 15 40"
+sq-collider
+sq-triggercollider
+explode-ammo
+animation__spiny="property: object3D.rotation.y; from: 0; to: 360; dur: 10000; delay: 0; loop: true; dir: normal; easing: linear; elasticity: 400; autoplay: true; enabled: true;"
+><a-sphere id="explode1Rigid"
+material="shader: flat; color: white; opacity: 0"
+radius="1"
+scale='0.99 0.99 0.99'
+position="0 0 0"
+sq-collider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+></a-sphere></a-sphere>
+
+<a-sphere id="explode2"
+material="shader: flat; color: red; opacity: 1; src: #pattern69; repeat: 2 2"
+radius="1"
+scale='1 1 1'
+position="15 15 70"
+sq-collider
+sq-triggercollider
+explode-ammo
+animation__spiny="property: object3D.rotation.y; from: 0; to: 360; dur: 10000; delay: 0; loop: true; dir: normal; easing: linear; elasticity: 400; autoplay: true; enabled: true;"
+><a-sphere id="explode2Rigid"
+material="shader: flat; color: white; opacity: 0"
+radius="1"
+scale='0.99 0.99 0.99'
+position="0 0 0"
+sq-collider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+></a-sphere></a-sphere>
+
+<a-sphere id="explode3"
+material="shader: flat; color: red; opacity: 1; src: #pattern69; repeat: 2 2"
+radius="1"
+scale='1 1 1'
+position="-15 15 40"
+sq-collider
+sq-triggercollider
+explode-ammo
+animation__spiny="property: object3D.rotation.y; from: 0; to: 360; dur: 10000; delay: 0; loop: true; dir: normal; easing: linear; elasticity: 400; autoplay: true; enabled: true;"
+><a-sphere id="explode3Rigid"
+material="shader: flat; color: white; opacity: 0"
+radius="1"
+scale='0.99 0.99 0.99'
+position="0 0 0"
+sq-collider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+></a-sphere></a-sphere>
+
+<a-sphere id="explode4"
+material="shader: flat; color: red; opacity: 1; src: #pattern69; repeat: 2 2"
+radius="1"
+scale='1 1 1'
+position="-15 15 70"
+sq-collider
+sq-triggercollider
+explode-ammo
+animation__spiny="property: object3D.rotation.y; from: 0; to: 360; dur: 10000; delay: 0; loop: true; dir: normal; easing: linear; elasticity: 400; autoplay: true; enabled: true;"
+><a-sphere id="explode4Rigid"
+material="shader: flat; color: white; opacity: 0"
+radius="1"
+scale='0.99 0.99 0.99'
+position="0 0 0"
+sq-collider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+></a-sphere></a-sphere>
+
+<!-- - - - - - - - - - - Player Portal - - - - - - - - - - -->
+
+<!-- Portal Arena Enter Exit S -->
+<a-circle id="player-portalS1"
+material="shader: flat; color: White; opacity: 0.8; side: double; src: #pattern78; repeat: 1 1"
+radius="1"
+segments="32"
+side="double"
+theta-length="360"
+theta-start="0"
+scale='0.75 1 0.75'
+position="0 1.5 27.5"
+sq-collider
+sq-triggercollider
+player-portal="connect: player-portalS2; exitDirection: forward"
+></a-circle>
+<a-circle id="player-portalS2"
+material="shader: flat; color: White; opacity: 0.8; side: double; src: #pattern78; repeat: 1 1"
+radius="1"
+segments="32"
+side="double"
+theta-length="360"
+theta-start="0"
+scale='0.75 1 0.75'
+position="0 1.5 29.5"
+sq-collider
+sq-triggercollider
+player-portal="connect: player-portalS1; exitDirection: backward"
+></a-circle>
+
+<!-- Portal A -->
+<a-circle id="player-portalA1"
+material="shader: flat; color: yellow; opacity: 0.8; side: double; src: #pattern78; repeat: 1 1"
+radius="1"
+segments="32"
+side="double"
+theta-length="360"
+theta-start="0"
+scale='0.75 1 0.75'
+position="-22.5 1.5 54"
+sq-collider
+sq-triggercollider
+player-portal="connect: player-portalA2; exitDirection: forward"
+></a-circle>
+<a-circle id="player-portalA2"
+material="shader: flat; color: yellow; opacity: 0.8; side: double; src: #pattern78; repeat: 1 1"
+radius="1"
+segments="32"
+side="double"
+theta-length="360"
+theta-start="0"
+scale='0.75 1 0.75'
+position="-22.5 14 31"
+sq-collider
+sq-triggercollider
+player-portal="connect: player-portalA1; exitDirection: backward"
+></a-circle>
+
+<!-- Portal B -->
+<a-circle id="player-portalB1"
+material="shader: flat; color: orange; opacity: 0.8; side: double; src: #pattern78; repeat: 1 1"
+radius="1"
+segments="32"
+side="double"
+theta-length="360"
+theta-start="0"
+scale='0.75 1 0.75'
+position="-22.5 1.5 56"
+sq-collider
+sq-triggercollider
+player-portal="connect: player-portalB2; exitDirection: backward"
+></a-circle>
+<a-circle id="player-portalB2"
+material="shader: flat; color: orange; opacity: 0.8; side: double; src: #pattern78; repeat: 1 1"
+radius="1"
+segments="32"
+side="double"
+theta-length="360"
+theta-start="0"
+scale='0.75 1 0.75'
+position="-22.5 14 79"
+sq-collider
+sq-triggercollider
+player-portal="connect: player-portalB1; exitDirection: forward"
+></a-circle>
+
+<!-- Portal C -->
+<a-circle id="player-portalC1"
+material="shader: flat; color: red; opacity: 0.8; side: double; src: #pattern78; repeat: 1 1"
+radius="1"
+segments="32"
+side="double"
+theta-length="360"
+theta-start="0"
+scale='0.75 1 0.75'
+position="3 1.5 55"
+rotation="0 90 0"
+sq-collider
+sq-triggercollider
+player-portal="connect: player-portalC2; exitDirection: left"
+></a-circle>
+<a-circle id="player-portalC2"
+material="shader: flat; color: red; opacity: 0.8; side: double; src: #pattern78; repeat: 1 1"
+radius="1"
+segments="32"
+side="double"
+theta-length="360"
+theta-start="0"
+scale='0.75 1 0.75'
+position="24 21.5 55"
+rotation="0 90 0"
+sq-collider
+sq-triggercollider
+player-portal="connect: player-portalC1; exitDirection: right"
+></a-circle>
+
+<!-- Portal D -->
+<a-circle id="player-portalD1"
+material="shader: flat; color: blue; opacity: 0.8; side: double; src: #pattern78; repeat: 1 1"
+radius="1"
+segments="32"
+side="double"
+theta-length="360"
+theta-start="0"
+scale='0.75 1 0.75'
+position="15 1.5 54"
+rotation="0 0 0"
+sq-collider
+sq-triggercollider
+player-portal="connect: player-portalD2; exitDirection: forward"
+></a-circle>
+<a-circle id="player-portalD2"
+material="shader: flat; color: blue; opacity: 0.8; side: double; src: #pattern78; repeat: 1 1"
+radius="1"
+segments="32"
+side="double"
+theta-length="360"
+theta-start="0"
+scale='0.75 1 0.75'
+position="0 21.5 56"
+rotation="0 0 0"
+sq-collider
+sq-triggercollider
+player-portal="connect: player-portalD1; exitDirection: backward"
+></a-circle>
+
+<!-- Portal E -->
+<a-circle id="player-portalE1"
+material="shader: flat; color: green; opacity: 0.8; side: double; src: #pattern78; repeat: 1 1"
+radius="1"
+segments="32"
+side="double"
+theta-length="360"
+theta-start="0"
+scale='0.75 1 0.75'
+position="15 1.5 56"
+rotation="0 0 0"
+sq-collider
+sq-triggercollider
+player-portal="connect: player-portalE2; exitDirection: backward"
+></a-circle>
+<a-circle id="player-portalE2"
+material="shader: flat; color: green; opacity: 0.8; side: double; src: #pattern78; repeat: 1 1"
+radius="1"
+segments="32"
+side="double"
+theta-length="360"
+theta-start="0"
+scale='0.75 1 0.75'
+position="0 14 54"
+rotation="0 0 0"
+sq-collider
+sq-triggercollider
+player-portal="connect: player-portalE1; exitDirection: forward"
+></a-circle>
+
+<!-- - - - - - - - - - - Animated Obstacles - - - - - - - - - - -->
+<a-box id="obstacle1"
+material="shader: flat; color: orange; src: #pattern59; repeat: 3 1"
+position="-9 4 55"
+scale="12 2 0.1"
+sq-collider
+
+animation__spiny="property: object3D.rotation.y; from: 0; to: 360; dur: 2000; delay: 0; loop: true; dir: normal; easing: linear; elasticity: 400; autoplay: true; enabled: true;"
+></a-box>
+
+<a-box id="obstacle2"
+material="shader: flat; color: orange; src: #pattern59; repeat: 3 1"
+position="0 11 50"
+scale="10 2 0.1"
+sq-collider
+
+animation__spiny="property: object3D.rotation.y; from: 60; to: 120; dur: 3000; delay: 0; loop: true; dir: alternate; easing: easeInOutElastic; elasticity: 400; autoplay: true; enabled: true;"
+></a-box>
+
+<a-box id="obstacle3"
+material="shader: flat; color: orange; src: #pattern59; repeat: 1 2"
+position="6 4.5 55"
+scale="2 9 0.1"
+sq-collider
+
+animation__spinx="property: object3D.rotation.x; from: 0; to: 360; dur: 4000; delay: 0; loop: true; dir: normal; easing: linear; elasticity: 400; autoplay: true; enabled: true;"
+></a-box>
+
+<a-box id="obstacle4"
+material="shader: flat; color: orange; src: #pattern59; repeat: 1 4"
+position="23.5 7 55"
+scale="3 20 0.1"
+sq-collider
+
+animation__spinx="property: object3D.rotation.x; from: 45; to: 135; dur: 8000; delay: 0; loop: true; dir: alternate; easing: easeInOutElastic; elasticity: 400; autoplay: true; enabled: true;"
+></a-box>
+
+<a-box id="obstacle5"
+material="shader: flat; color: orange; src: #pattern59; repeat: 1 2"
+position="-1.25 2.5 67.5"
+scale="2.5 5 0.1"
+sq-collider
+animation__movex="property: object3D.position.x; from: 1.25; to: -1.25; dur: 10000; delay: 0; loop: true; dir: alternate; easing: easeInOutCirc; elasticity: 400; autoplay: true; enabled: true;"
+></a-box>
+
+<a-box id="obstacle6"
+material="shader: flat; color: orange; src: #pattern59; repeat: 2 1"
+position="0 2 76.25"
+scale="7.5 4 0.1"
+sq-collider
+
+animation__spiny="property: object3D.rotation.y; from: 0; to: 360; dur: 10000; delay: 0; loop: true; dir: normal; easing: linear; elasticity: 400; autoplay: true; enabled: true;"
+></a-box>
+
+<!-- - - - - - - - - - - Table - - - - - - - - - - -->
+<a-box id='startTable'
+material="shader: flat; color: white; src: #pattern74; repeat: 0.5 0.5"
+depth="1.5" 
+height="0.1"
+width="1"
+position="-4.4 1 25.5"
+sq-collider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+></a-box>
+
+<!-- - - - - - - - - - - Triggers - - - - - - - - - - -->
+<a-box id='gameStart'
+material="shader: flat; color: white; opacity: 1; src: #pattern16"
+position="-4.25 1.25 25.5"
+scale="0.25 0.25 0.25"
+sq-grabbable
+sq-rigidbody
+sq-collider
+game-start
+></a-box>
+
+<a-box id='levelStartTrigger'
+material="shader: flat; color: green; opacity: 0.5; side: double; src: #pattern16; repeat: 0.5 1"
+position="0 1.5 34"
+scale="2 4 2"
+sq-collider
+sq-triggercollider
+next-level
+></a-box>
+<!-- - - - - - - - - - - Text - - - - - - - - - - -->
+<a-entity id="enterArenaText"
+text="color: cyan; value:Enter Arena; width: 1; align: center"
+position="0 3 27"
+rotation="0 180 0"
+scale="2 2 2"
+></a-entity>
+
+<a-entity id="gameplayText"
+text="color: cyan; value:Destroy All Target Objectives to Advance; width: 1; align: center"
+position="0 4 28"
+rotation="0 180 0"
+scale="2 2 2"
+></a-entity>
+
+<a-entity id="gameStartText"
+text="color: cyan; value:Pick up and Drop Cube to\n Start/Restart Game; width: 1; align: center"
+position="-4.5 2 25.5"
+rotation="0 90 0"
+scale="1 1 1"
+></a-entity>
+
+<a-entity id="nextLevelText"
+text="color: cyan; value:After Game Start\nEnter Green Trigger Area in Arena to Start Each Level; width: 1; align: center"
+position="-4.5 3 25.5"
+rotation="0 90 0"
+scale="1 1 1"
+></a-entity>
+
+<a-entity id="deathCubeText"
+text="color: cyan; value:Death Cubes will spawn if you take too long!\nYou can temporarily disable them however.; width: 1; align: center"
+position="-4.5 4 25.5"
+rotation="0 90 0"
+scale="1 1 1"
+></a-entity>
+
+<a-entity id="grabText"
+text="color: cyan; value:Use the Sword or Shield for Protection\n It can destroy Enemy Ammo.\nThe Arena is Climbable too!; width: 1; align: center"
+position="4.5 3 25.5"
+rotation="0 -90 0"
+scale="1 1 1"
+></a-entity>
+
+<a-entity id="infoText"
+text="color: white; value:Game Ready; width: 1; align: center"
+position="0 16 30.5"
+rotation="0 0 0"
+scale="4 4 4"
+></a-entity>
+
+<a-entity id="levelText"
+text="color: white; value:Level; width: 1; align: center"
+position="0 15 30.5"
+rotation="0 0 0"
+scale="4 4 4"
+></a-entity>
+
+<a-entity id="objectivesText"
+text="color: white; value:Targets; width: 1; align: center"
+position="0 14 30.5"
+rotation="0 0 0"
+scale="4 4 4"
+></a-entity>
+
+<a-entity id="pointsText"
+text="color: white; value:Points; width: 1; align: center"
+position="0 13 30.5"
+rotation="0 0 0"
+scale="4 4 4"
+></a-entity>
+
+<a-entity id="healthText"
+text="color: white; value:Health; width: 1; align: center"
+position="0 12 30.5"
+rotation="0 0 0"
+scale="4 4 4"
+></a-entity>
+
+<a-entity id="infoTextFloor"
+text="color: white; value:Game Ready; width: 1; align: center"
+position="0 0.1 42"
+rotation="-90 180 0"
+scale="4 4 4"
+></a-entity>
+
+<a-entity id="levelTextFloor"
+text="color: white; value:Level; width: 1; align: center"
+position="0 0.1 41"
+rotation="-90 180 0"
+scale="4 4 4"
+></a-entity>
+
+<a-entity id="objectivesTextFloor"
+text="color: white; value:Targets; width: 1; align: center"
+position="0 0.1 40"
+rotation="-90 180 0"
+scale="4 4 4"
+></a-entity>
+
+<a-entity id="pointsTextFloor"
+text="color: white; value:Points; width: 1; align: center"
+position="0 0.1 39"
+rotation="-90 180 0"
+scale="4 4 4"
+></a-entity>
+
+<a-entity id="healthTextFloor"
+text="color: white; value:Health; width: 1; align: center"
+position="0 0.1 38"
+rotation="-90 180 0"
+scale="4 4 4"
+></a-entity>
+
+<!-- - - - - - - - - - - Floor - - - - - - - - - - -->
+
+<a-box id="floor"
+material="shader: flat; color: #3EB489; opacity: 1; src: #pattern55; repeat: 40 40"
+scale="200 0.1 200"
+sq-boxcollider
+sq-triggercollider
+block-bounce-y-all
+><a-box id="floorRigid"
+material="shader: flat; color: #3EB489; opacity: 0"
+scale="0.99 0.99 0.99"
+sq-boxcollider
+sq-rigidbody="
+isKinematic: true;
+useGravity: false;
+"
+></a-box></a-box>
+
+<!-- - - - - - - - - - - Sky - - - - - - - - - - -->
+<a-sky color="#C14B76"></a-sky>
+<!-- - - - - - - - - - - End - - - - - - - - - - -->
+</a-scene>
+</main>
+</body>
+</html>
