@@ -2,6 +2,8 @@
 
 BounceForce Target Battle Arena is built on A-Frame with AUXL support for Sidequest's Banter. It was created for a hackathon competition sponsored by Sidequest to test and create content for their Banter VR verse application.
 ---
+*Grand Prize Winner*
+---
 [Game Link - Requires Banter](https://minty-crisp.github.io/banter-bounceforce/)
 
 Github Banter Link : banter://minty-crisp.github.io/banter-bounceforce/
