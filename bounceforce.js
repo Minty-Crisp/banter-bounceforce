@@ -3589,18 +3589,16 @@ AFRAME.registerComponent('explode-ammo', {
 
 		//Trigger Enter
 		this.el.addEventListener('trigger-enter', () => {
-			if(this.el.object3D.userData.isLocalPlayer ) {
-				// This is the current player triggering
-			}
 			allAmmo.forEach((ammo) => {
 				if(this.el.id === objectId && this.el.object3D.userData.other.id === ammo.name){
-					addExplosionForce(400, object.object3D.position, 2, ammo.id)
-					//Ammo will die on next bounce
-					ammo.currentBounces = 100;
+					addForce({x: ammo.xDirection*-1, y: ammo.yDirection*-1, z: ammo.zDirection*-1}, ammo.bounceType, ammo.id);
+					//Both these bottom functions are now destroying the object itself. Can't figure out why.
+					//addExplosionForce(400, object.object3D.position, 2, ammo.id)
+					//addGlobalExplosionForce(400, object.object3D.position, 2)
 				}
 			});
 		});
-    }
+    },
 });
 
 //Show Hidden
